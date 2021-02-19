@@ -1,0 +1,417 @@
+/* typography */
+
+* {
+    --font: -apple-system, sans-serif;
+}
+
+.title00 {
+    font-family: var(--font);
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72px;
+}
+
+.title0 {
+    font-family: var(--font);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 58px;
+}
+
+/* https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/ */
+
+.largeTitle {
+    font-family: var(--font);
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 41px;
+}
+
+.title1 {
+    font-family: var(--font);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.title2 {
+    font-family: var(--font);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.title3 {
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.headline {
+    font-family: var(--font);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.body {
+    font-family: var(--font);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.callout {
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.subhead {
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.footnote {
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.caption1 {
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.caption2 {
+    font-family: var(--font);
+    font-weight: 11px;
+    font-weight: 400;
+    line-height: 13px;
+}
+
+/* colors */
+
+/* https://developer.apple.com/design/human-interface-guidelines/watchos/visual/color/ */
+
+* {
+    --black: rgba(0, 0, 0, 1);
+    --white: rgba(255, 255, 255, 1);
+
+    /* light titanium */
+    --light0: rgba(194, 173, 149, 1);
+    /* rose gold */
+    --light1: rgba(236, 165, 132, 1);
+
+    /* dark titanium */
+    --dark0: rgba(85, 78, 64, 1);
+    /* yellow gold */
+    --dark1: rgba(212, 166, 124, 1);
+
+    --red: rgba(250, 17, 79, 1);
+    --orange0: rgba(255, 59, 48, 1);
+    --orange1: rgba(255, 149, 0, 1);
+    --yellow: rgba(255, 230, 32, 1);
+    --green0: rgba(4, 222, 113, 1);
+
+    --green1: rgba(0, 245, 234, 1);
+    --blue1: rgba(90, 200, 250, 1);
+    --blue0: rgba(32, 148, 250, 1);
+    --purple: rgba(120, 122, 255, 1);
+    --gray: rgba(242, 244, 255, 1);
+}
+
+/* reset */
+
+html, body, header, section, div, p, ul, ol, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+li {
+    list-style: none;
+    display: inline;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+/* defaults */
+
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    font-family: -apple-system-body, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+p { max-width: 800px }
+
+em {
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* colors: light */
+
+.main {
+    background-color: var(--white);
+    color: var(--black);
+    animation: background-animation-light 8s infinite ease-in-out alternate;
+}
+
+a {
+    color: var(--gray);
+}
+
+a:hover {
+    color: var(--black);
+    background-color: var(--gray);
+}
+
+/* colors: dark */
+
+/*
+@media (prefers-color-scheme: dark) {
+    .main {
+        background-color: var(--black);
+        color: var(--white);
+        animation: background-animation-dark 8s infinite ease-in-out alternate;
+    }
+
+    a {
+        color: var(--yellow);
+    }
+
+    a:hover {
+        color: var(--black);
+        background-color: var(--gray);
+    }
+}
+*/
+
+/* … */
+
+a.text-link {
+    display: flex;
+    justify-content: center;
+    transform: scale(1);
+    transition: all ease-in-out 100ms;
+}
+
+a.text-link:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 100ms;
+}
+
+.vMargin {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.vMargin_2x {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.vList * {
+    display: block;
+}
+
+.text-link {
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.smallcaps {
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vCenter_h {
+    min-height: 100vh;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.hPadding {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.vPadding {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* animation */
+
+@keyframes background-animation-light {
+    0% { background-color: var(--light0); }
+    100% { background-color: var(--light1); }
+}
+
+@keyframes background-animation-dark {
+    0% { background-color: var(--dark0); }
+    100% { background-color: var(--dark1); }
+}
+
+/* mobile */
+
+@media (max-width: 600px) {}
+
+/* desktop */
+
+@media (min-width: 800px) {}
+
+
+/* <<< >>> */
+/* <<< >>> */
+/* <<< >>> */
+
+* {
+	--font: Futura, -apple-system, sans-serif;
+}
+
+* {
+	--slate: rgba(56, 56, 54, 1);
+	--ceramic: rgba(244, 244, 244, 1);
+}
+
+@font-face {
+	font-family: Futura;
+	src: url("../fonts/Futura.woff2");
+}
+
+/* colors */
+
+.lighttitanium {
+	color: var(--light0);
+}
+.rosegold {
+	color: var(--light1);
+}
+.darktitanium {
+	color: var(--dark0);
+}
+.yellowgold {
+	color: var(--dark1);
+}
+
+.slate {
+	color: var(--slate);
+}
+.ceramic {
+	color: var(--ceramic);
+}
+
+.yellow {
+	color: var(--yellow);
+}
+.green {
+	color: var(--green0);
+}
+
+.iphone {
+	object-fit: contain;
+	height: 80vh;
+	max-width: 80vh;
+}
+
+.badge {
+	object-fit: contain;
+	width: 30vh;
+}
+
+.columns {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	flex-basis: 0;
+	flex-grow: 1;
+
+	padding: 16px;
+}
+
+@media (min-width: 800px) {
+	.columns {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-start;
+	}
+}
+
+/* Animation */
+
+.hidden {
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: scale(.7, .7) }
+    to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fade-in 1.4s;
+}
+
+.animation-scale:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.2, 1.2);
+}
+
+.animation-scale {
+    transition: all .8s ease-in-out;
+    transform: scale(1, 1);
+}
+
+/* <<< >>> */
+/* <<< >>> */
+/* <<< >>> */
